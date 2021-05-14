@@ -90,7 +90,7 @@ app.post("/follow/:userId/:userToFollowId", async (req, res) => {
         var userId = req.params.userId.toString().trim();
         var userToFollowId = req.params.userToFollowId.toString().trim();
 
-        const followers = client.query("INSERT INTO users (following) VALUES ($2) WHERE user_id = $1", [userId, userToFollowId]);
+        const followers = client.query("UPDATE users SET following = $2 WHERE user_id = $1", [userId, userToFollowId]);
         
         res.status(200).send(followers);
 
@@ -101,6 +101,39 @@ app.post("/follow/:userId/:userToFollowId", async (req, res) => {
         res.status(500).send("server Error");
     }
 
+});
+
+app.post("/unfollow/:userId/:userToUnFollowId", async (req, res) => {
+
+    try {
+        var userId = req.params.userId.toString().trim();
+        var userToUnFollowId = req.params.userToUnFollowId.toString().trim();
+
+        const followers = client.query("DELETE following = $2 FROM users WHERE user_id = $1", [userId, userToUnFollowId]);
+        
+        res.status(200).send(followers);
+
+        
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send("server Error");
+    }
+
+});
+
+app.get("/followers/:userId", async (req, res) => {
+    try {
+        var userId = req.params.userId.toString().trim();
+
+        const followers = client.query("SELECT following FROM users WHERE user_id = $1", [userId]);
+        
+        res.status(200).send(followers);
+
+        
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send("server Error");
+    }
 });
 
 app.get("/users", async (req, res) => {
