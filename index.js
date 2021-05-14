@@ -15,7 +15,6 @@ app.post("/create-user", async (req, res) => {
         console.log(req.body);
 
         // Getting the values from frontend
-        var id = req.body.id.toString();
         var firstName = req.body.firstName.toString();
         var surname = req.body.surname.toString();
         var displayName = req.body.displayName.toString();
@@ -32,8 +31,8 @@ app.post("/create-user", async (req, res) => {
 
         // Inserting the values to the db
         const newUser = await client.query(
-            "INSERT INTO users VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13); RETURNING *", 
-            [id, firstName, surname, displayName, password, dob, avatar, bio, following, obs_config_rmrplink, obs_config_streamkey, live_uri, live_image]
+            "INSERT INTO users (firstName, surname, displayName, password, dob, avatar, bio, following, obs_config_rmrplink, obs_config_streamkey, live_uri, live_image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12); RETURNING *", 
+            [firstName, surname, displayName, password, dob, avatar, bio, following, obs_config_rmrplink, obs_config_streamkey, live_uri, live_image]
         );
 
         res.json({ newUser });
