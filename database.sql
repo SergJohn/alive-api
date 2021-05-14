@@ -23,6 +23,11 @@ CREATE TABLE users
 INSERT INTO users VALUES ('167d5272-cb89-4384-a253-cd1a2aaa7745', 'Carolinne', 'Marques', 'corcarolinne', 'pass123', '1996-03-15', 'https://viewer-user-avatars.s3-eu-west-1.amazonaws.com/a1de584b13e93ea9_f077ebed-6e82-4806-a924-408650695bf3', 'This is my channel. Enjoy!', '{}', 'rtmps://b43189d95416.global-contribute.live-video.net:443/app/', 'sk_eu-west-1_nUmy0onKaBCh_LARWfMUkrSw9eL3LGRs7W9fCBXfWOM', 'https://b43189d95416.eu-west-1.playback.live-video.net/api/video/v1/eu-west-1.248056333272.channel.X3k9AgkWFOnT.m3u8', 'https://scontent-dub4-1.xx.fbcdn.net/v/t1.6435-9/110202748_114186017041375_3516819019169033276_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=4NeaVTtcN2QAX_Df_R0&_nc_ht=scontent-dub4-1.xx&oh=ce9ddd7b4b72556f6aa289c2b9fc363e&oe=60C3BE38');
 INSERT INTO users VALUES ('6105aefb-fa30-4d13-bcad-7b52934d0903','Jonathan','Cristalino','jhonny','PASS123','1996-03-15','https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F170502600_194580065553105_9137018033825879689_n.jpg%3Fccb%3D11-4%26oh%3D768454a6ec279db33b2f4ef1f36f019e%26oe%3D60A2B904&t=l&u=353838708697%40c.us&i=1617731516&n=HwvXGemTCzTRIAKAp%2BJhvCR6eUwJKCsIooyjNYnQh%2BY%3D', 'This is my channel. Enjoy!', '{}','rtmps://b43189d95416.global-contribute.live-video.net:443/app/','sk_eu-west-1_nUmy0onKaBCh_LARWfMUkrSw9eL3LGRs7W9fCBXfWOM','https://b43189d95416.eu-west-1.playback.live-video.net/api/video/v1/eu-west-1.248056333272.channel.X3k9AgkWFOnT.m3u8', 'https://scontent-dub4-1.xx.fbcdn.net/v/t1.6435-9/110202748_114186017041375_3516819019169033276_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=4NeaVTtcN2QAX_Df_R0&_nc_ht=scontent-dub4-1.xx&oh=ce9ddd7b4b72556f6aa289c2b9fc363e&oe=60C3BE38');
 
+-- mario => https://viewer-user-avatars.s3-eu-west-1.amazonaws.com/b0779bf9f07c7f85_a345ae30-54bc-4986-bdb2-c612130f657b
+
+-- jhonny => https://viewer-user-avatars.s3-eu-west-1.amazonaws.com/a617c768c002b0ca_cb7cf57c-6cdf-4c6e-ab5f-771db5323244
+
+-- client.query("UPDATE users SET avatar = 'https://viewer-user-avatars.s3-eu-west-1.amazonaws.com/a617c768c002b0ca_cb7cf57c-6cdf-4c6e-ab5f-771db5323244' WHERE user_id = 'eeb869c9-7b0f-428a-9874-1503d82db267');
 
 -- [
 --   {
